@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+    i = 2;
+    var num = parseInt(prompt('Enter any number'));
+    var degree1 = prompt('Enter degree to raise');
+    reslt = num;
+    degree = parseInt(degree1);
+
+    if (degree1 === null || degree1 === '' || isNaN(degree)) {
+        degree = 2;
+    } else {
+        degree = degree;
+    }
+    while (i <= degree) {
+        i++;
+        reslt *= num;
+    }
+    var showReslt = function() {
+        alert(reslt);
+        console.log(num);
+    };
+    showReslt();
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	
+    var southData = [];
+    var westData = [];
+    var eastData = [];
+    var northData = [];
+
+    var randomize = function(min, max) {
+        var rand = Math.round(min - 0.5 + Math.random() * (max - min + 1));
+        return rand;
+    };
+
+    var arrayConcat = function(southData, westData, eastData, northData) {
+        averageData = southData.concat(westData, eastData, northData);
+        return averageData;
+    };
+
+    var fillData = function(southData, westData, eastData, northData) {
+        for (var i = 0; i < 7; i++) {
+            southData.push(randomize(13, 25));
+            westData.push(randomize(13, 25));
+            eastData.push(randomize(13, 25));
+            northData.push(randomize(13, 25));
+        }
+        arrayConcat(southData, westData, eastData, northData);
+        console.log(southData + '= southData\n' + northData + '= northData\n' + westData + '= westData\n' + eastData + '= eastData\n');
+
+        console.log(countArithMean(southData));
+        console.log(countArithMean(westData));
+        console.log(countArithMean(eastData));
+        console.log(countArithMean(northData));
+        console.log(countArithMean(averageData));
+    };
+
+    var countArithMean = function(arr) {
+        for (var i = sum = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return [sum, sum / arr.length];
+    };
+
+    fillData(southData, westData, eastData, northData);
+
+    </script>
+</body>
+
+</html>

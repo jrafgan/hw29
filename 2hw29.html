@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+    var num = prompt('Enter any number, to validator.\n\nTo Quit press Cancel');
+    var numP = parseInt(num);
+
+    if (num === null) {
+        var info = 'You\'ve pressed Cancel';
+    } else if (numP === 0) {
+        var info = 'You\'ve entered : 0';
+    } else if (numP < 0) {
+        var info = 'You\'ve entered negative number';
+    } else if (numP > 0) {
+        var info = 'You\'ve entered positive number';
+    } else if (!numP) {
+        var info = 'Sorry, you\'ve entered not a number';
+    }
+
+    var showInfo = function() {
+        alert(info);
+        console.log(num);
+    };
+    showInfo();
+
+    </script>
+</body>
+
+</html>
