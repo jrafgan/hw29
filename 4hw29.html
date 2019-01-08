@@ -9,24 +9,20 @@
 <body>
     <script type="text/javascript">
 
-    i = 0;
-    k = 0;
-    var symbol = prompt('Enter a symbol to find');
-    var word = prompt('Enter a word to search a symbol');
-
-    while (i <= word.length) {
-
-        var j = word.charAt(i);
-        i++;
-        console.log(j);
-        if (j === symbol) {
-            k++;
+    var countChars = function(symbol, word) {
+        var k = 0;
+        for (var i = 0; i < word.length; i++) {
+            var s = word.charAt(i);
+            if (s === symbol) {
+                k++;
+            }
         }
-    }
-    var showInfo = function() {
-        alert('Found matching symbols = ' + k + '\nTotal word symbols = ' + word.length);
-    }
-    showInfo();
+        return 'Quantity of symbol '  + '"' + symbol + '"' + ' = ' + k;
+    };
+
+    var symbol = prompt('Enter symbol to find');
+    var word = prompt('Enter word to search in');
+    alert(countChars(symbol, word));
     
     </script>
 </body>
