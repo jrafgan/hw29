@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+    var getFahrenheit = function (celcius) {
+        return (celcius*9 / 5) + 32;
+    };
+
+    var celcius = parseInt(prompt('Please enter Celcius degrees to convert\nto Fahrenheit degrees'));
+    if (!isNaN(celcius)) {
+        alert(celcius + ' Celcius = ' + getFahrenheit(celcius) + ' Fahrenheit');
+    }
+    
+    </script>
+</body>
+
+</html>
